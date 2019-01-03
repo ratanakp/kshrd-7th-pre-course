@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="input" type="text">
+
+    <button onclick="clicked()">Click</button>
+
+    <span id="span" style="color: red"></span>
+    <h1 id="h1"></h1>
+
+    <script>
+
+
+        // var arr = new Array();
+        // arr[0] = 'element 0 of arr';
+        // arr[1] = 2;
+        // arr[6] = 5.5;
+
+        // console.log(arr);
+
+        // var arr3 = [[4, 5], [7, 8], [9, 10]];
+
+        // console.log(arr3);
+        // console.log('string log')
+
+
+        var user = {
+            firstName: 'Dara',
+            lastName: 'Kok',
+            show: function () {
+                console.log("FirstName: " + this.firstName + ", LastName: " + this.lastName);
+            }
+        };
+
+        var x;
+
+        var str = "fsdfsfs";
+        var string = new String("fsdfsfsdfsd");
+
+        var num1 = new Number(60);
+
+        var num2 = 90;
+
+        console.log(typeof (num1));
+        console.log(typeof (num2));
+
+
+        console.log(x);
+
+
+        console.log(user.firstName);
+        console.log(user['lastName']);
+
+        console.log(user.show());
+        console.log(user['show']());
+
+
+        // function
+
+        function myFunc() {
+            document.write('Hello!')
+        }
+
+        var myFunc2 = function () {
+            document.write('Hello from func 2!')
+        }
+
+        myFunc();
+        myFunc2();
+
+
+
+        // function type
+        function func1(arg1, arg2) {
+            document.write('Value 1 + Value 2 = ' + (arg1 + arg2));
+        }
+
+        function func2(arg1, arg2) {
+            return (arg1 + arg2);
+        }
+
+        function func3() {
+            document.write('Hello world!');
+        }
+
+        function func4() {
+            return "Hello world!";
+        }
+        console.log(func2(3, 4) + 5);
+
+        function multiplySimple(x, y) {
+            return x + y;
+        }
+
+
+        // function in ES6 (Arrow function)
+
+        const multiplyES6 = (x, y) => x + y;
+
+        console.log(multiplyES6(8, 9));
+
+
+        // const splitString = param => { return param.split(' '); };
+        const splitString = param => param.split(' ');
+
+        function splitString2(param) {
+            return param.split(' ');
+        }
+
+        console.log(splitString('this is es6 function!'));
+        const functionArrow = () => {
+
+        };
+
+
+        // var obj = (p_id, p_name) => ({id: p_id, name: p_name}) ;
+        var obj = (p_id, p_name) => {
+            return { id: p_id, name: p_name }
+        };
+        console.log(obj(1, "Full Name"));
+
+
+        if (5 === '5') {
+            // alert('true')
+        }
+        else
+            // alert('false');
+
+            console.log(typeof (5) + "  " + typeof ('5'));
+
+
+        if (true) {
+            console.log('true');
+        }
+        else
+            console.log('false');
+
+        console.log(10 > 90 ? 'true' : 'false');
+
+
+        var con = 90;
+        if (con < 90)
+            console.log('fsfds');
+
+        else if (con > 90) {
+            console.log('fsdf');
+            console.log('fsdf');
+            console.log('fsdf');
+        }
+        else {
+            console.log('else');
+        }
+
+
+        switch (con) {
+            case 80:
+                console.log('case 80');
+                break;
+            case 90:
+                console.log('case 90');
+                break;
+            case 100:
+                console.log('case 100');
+                break;
+            default:
+                console.log("default!");
+                break;
+        }
+
+
+        for (let i = 0; i < 10; i++) {
+            if (i == 5)
+                continue;
+
+            console.log(i);
+
+        }
+
+        // while (true) {
+        //     console.log('while!');
+        // }
+
+        let j = 0;
+        do {
+            console.log('do while!');
+            j++;
+        } while (j < 10);
+
+
+
+
+
+        var arr = ['Cow', 90, 'Meow'];
+
+        for (const key in arr) {
+
+            console.log(arr[key]);
+        }
+
+
+        // Error
+
+
+
+
+        function clicked() {
+
+            try {
+                var input = document.getElementById('input');
+
+                var num = new Number(input.value);
+
+
+                if (isNaN(num.valueOf())) throw 'input is not a number!'
+
+            } catch (err) {
+                console.log(err);
+                document.getElementById('span').innerHTML = err;
+
+            }
+
+            finally {
+                document.getElementById('h1').innerHTML = num.valueOf();
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

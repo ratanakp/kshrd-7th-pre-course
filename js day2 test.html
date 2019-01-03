@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+        const multiplyES6 = (x, y) => { return x * y };
+        var multiplyES5 = function (x, y) { return x * y };
+
+        const phraseSplitterES6 = phrase => phrase.split(' ');
+        var docLogES6 = () => { console.log(document); };
+        var setNameIdsES6 = (id, name) => ({ id: id, name: name });
+
+
+        var str = new String();
+
+        str = "meme";
+
+        var b = new Boolean(true);
+
+        var ff = function (x, y) {
+            return x + y;
+        }
+
+        function welcomeMessage() {
+            return (document.write('You are welcome to the world of Javascript Developer'));
+        };
+
+        console.log(ff(5, 12));
+
+
+        var myString = "this is my string from vs code.";
+
+        function funName(meme) {
+            console.log(meme.split(' '));
+
+        }
+
+        const arrowFun = meme => meme.split(" ");
+
+        console.log(arrowFun('9 0'));
+
+        console.log(funName('ok fub'));
+
+        const multiplyES64 = (x, y) => { return x * y };
+
+        console.log(multiplyES64(4, 4));
+
+
+        const obj = (id, name) => ({ id, name });
+
+        console.log(obj(3, 4));
+
+        var conOp = (7 > 6) ? 'true' : 'false';
+
+        console.log(conOp);
+
+
+        var age = "33";
+        switch (age) {
+
+            case "10":
+                console.log("You are 19");
+            // break;
+            case "20":
+                console.log("You are fsdfsfsdf");
+
+            default:
+                console.log('Default');
+
+                break;
+        }
+
+        for (let index = 0; index < 4; index++) {
+            console.log(index);
+        }
+
+        var cars = ['bmw', 'rr', 'ls'];
+
+        for (const key in cars) {
+            console.log(cars[key]);
+        }
+
+        var i = 0;
+
+
+        for (let index = 0; index < 10; index++) {
+            
+            if (index == 5) continue;
+
+            console.log(index);
+
+        }
+
+
+        var myObj = (id, name) => ({id: id, name: name});
+
+        var oobbjj = [myObj(10, "pu nak"), myObj(11, "dara")];
+        for (const key in oobbjj) {
+            console.log(oobbjj[key]);
+            
+        }
+
+
+        function name(x, y) {
+            if(isNaN(x)) throw 'Is not a number!'
+            return x/y;
+        }
+
+
+
+        
+        try {
+            var v = name('s', 0);
+            console.log(oobbjj['d']);
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+
+        finally{
+            console.log('finally');
+            
+        }
+
+    </script> -->
+    <script>
+        var person = {
+            name: ['Bob', 'Smith'],
+            age: 32,
+            gender: 'male',
+            interests: ['music', 'skiing'],
+            bio: function () {
+                console.log(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+            }
+        };
+
+        person.bio();
+
+
+
+        function Person(fname, lname) {
+            this.firstname = fname;
+            this.lastname = lname;
+        }
+
+
+        var p = new Person('firstname', 'lastname');
+        p.age = 30;
+
+        var p1 = new Person('f', 'l');
+
+        console.log(p1);
+        console.log(p);
+
+
+
+        class MyClass {
+
+            constructor() {
+                // this.name;
+                this.gender;
+            }
+
+            sayHi() {
+                console.log('Hello world!' + this.name);
+            }
+        }
+
+        var y = 77;
+        console.log(y.toString(16));
+        
+        var c = new MyClass();
+        c.name = 'fsdf'
+        c.sayHi();
+    </script>
+</body>
+
+</html>
